@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build',
+         '--build-arg',
+         'configuration=${_CONFIGURATION}',
+         '-t',
+         'gcr.io/vero-2020/${_CI_PROJECT_NAME}:${_IMAGE_TAG}',
+         '--file=Dockerfile',
+         '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ["push", "gcr.io/vero-2020/${_CI_PROJECT_NAME}:${_IMAGE_TAG}"]
