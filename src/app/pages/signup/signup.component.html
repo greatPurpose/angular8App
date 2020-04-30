@@ -1,0 +1,23 @@
+<div style="min-height: 85vh;">
+    <div class="signup-topbar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-2">
+                    <!-- <a class="home-link" href="#"><div class="logo-img"></div></a> -->
+                    Logo
+                </div>
+                <div class="col-10">
+                    <ul>
+                        <li><a (click)="goToLogin()" rel="">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-center">
+        <div class="col-xl-6 col-md-12 mx-auto">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+<!-- </div> -->
